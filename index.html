@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 10px;
+        margin: 20px;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div id="gallery">
+    <img class="image" src="https://www.wonderplugin.com/wp-content/uploads/2013/12/Waves_1024.jpg" alt="Image 1">
+    <img class="image" src="https://www.wonderplugin.com/wp-content/uploads/2013/12/Green_1024.jpg" alt="Image 2">
+    <img class="image" src="https://www.wonderplugin.com/wp-content/uploads/2013/12/Island_1024.jpg" alt="Image 3">
+    <img class="image" src="https://www.wonderplugin.com/wp-content/uploads/2013/12/Desert_1024.jpg" alt="Image 4">
+    <img class="image" src="https://www.wonderplugin.com/wp-content/uploads/2013/12/Sunrise_1024.jpg" alt="Image 5">
+    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkxM7bqUhVW4EaLOR21oEaV0sj7bb05kCNDg&s" alt="Image 6">
+    <img class="image" src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 7">
+    <img class="image" src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 8">
+    <img class="image" src="https://images.pexels.com/photos/1062175/pexels-photo-1062175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 9">
+</div>
+
+<script>
+    const images = document.querySelectorAll('.image');
+    let currentImage = 0;
+    images[currentImage].style.display = 'block';
+    function showImage(index) {
+        images[currentImage].style.display = 'none';
+        currentImage = index;
+        images[currentImage].style.display = 'block';
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            showImage((currentImage - 1 + images.length) % images.length);
+        } else if (event.key === 'ArrowRight') {
+            showImage((currentImage + 1) % images.length);
+        }
+    });
+</script>
+</body>
+</html>
