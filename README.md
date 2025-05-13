@@ -10,6 +10,7 @@ This project showcases a simple yet effective image gallery with keyboard naviga
 - JavaScript
   
 **CODE OVERVIEW**
+
 **HTML**
 The HTML file (index.html) includes the structure of the gallery, with each image having a class of image.
 
