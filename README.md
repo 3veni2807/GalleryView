@@ -8,12 +8,6 @@ This project showcases a simple yet effective image gallery with keyboard naviga
 - HTML
 - CSS
 - JavaScript
-
-## Setup
-
-1. **Clone the repository:**
-   ```https
-   https://github.com/3veni2807/GalleryView.git
   
 **CODE OVERVIEW**
 **HTML**
