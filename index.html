@@ -39,9 +39,8 @@
     let currentImage = 0;
     images[currentImage].style.display = 'block';
     function showImage(index) {
-        images[currentImage].style.display = 'none';
-        currentImage = index;
-        images[currentImage].style.display = 'block';
+       images.forEach(img => img.style.display = 'none');
+       images[currentImage].style.display = 'block';
     }
 
     document.addEventListener('keydown', function(event) {
